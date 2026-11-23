@@ -10,15 +10,15 @@ export const Skills: React.FC = () => {
   const getIcon = (iconName: string) => {
     switch (iconName) {
       case "server":
-        return <Server size={20} />;
+        return <Server size={22} />;
       case "layout":
-        return <Layout size={20} />;
+        return <Layout size={22} />;
       case "terminal":
-        return <Terminal size={20} />;
+        return <Terminal size={22} />;
       case "cpu":
-        return <Cpu size={20} />;
+        return <Cpu size={22} />;
       default:
-        return <Server size={20} />;
+        return <Server size={22} />;
     }
   };
 
@@ -38,7 +38,7 @@ export const Skills: React.FC = () => {
   };
 
   return (
-    <section id="skills" className="py-8 sm:py-10 relative z-10">
+    <section id="skills" className="py-10 sm:py-12 relative z-10">
       <Container>
         <SectionHeader
           tag="Kompetensi"
@@ -46,29 +46,29 @@ export const Skills: React.FC = () => {
           subtitle="Teknologi, bahasa pemrograman, dan ekosistem yang saya kuasai dan aplikasikan."
         />
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {skillsData.map((category) => (
-            <Card key={category.id} className="p-5 flex flex-col justify-between">
+            <Card key={category.id} className="p-6 flex flex-col justify-between">
               <div>
                 <div
                   className={clsx(
-                    "w-10 h-10 rounded-xl flex items-center justify-center mb-4 border",
+                    "w-12 h-12 rounded-xl flex items-center justify-center mb-5 border",
                     getIconColorClass(category.iconColor)
                   )}
                 >
                   {getIcon(category.iconName)}
                 </div>
-                <h3 className="text-sm sm:text-base font-bold text-white mb-3">
+                <h3 className="text-base sm:text-lg font-bold text-white mb-4">
                   {category.title}
                 </h3>
               </div>
 
-              <div className="flex flex-wrap gap-1.5 pt-1">
+              <div className="flex flex-wrap gap-2 pt-2">
                 {category.skills.map((skill, idx) => (
                   <span
                     key={idx}
                     className={clsx(
-                      "px-2.5 py-0.5 rounded-md text-[11px] font-semibold border transition-colors",
+                      "px-3 py-1 rounded-lg text-xs font-semibold border transition-colors",
                       skill.highlight
                         ? "bg-blue-600/25 text-blue-300 border-accent-cyan/40 shadow-sm"
                         : "bg-white/[0.04] text-slate-300 border-white/[0.08]"
