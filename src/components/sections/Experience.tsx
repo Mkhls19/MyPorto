@@ -7,7 +7,7 @@ import { Briefcase, Award, BookOpen } from "lucide-react";
 
 export const Experience: React.FC = () => {
   return (
-    <section id="experience" className="py-10 sm:py-14 relative z-10">
+    <section id="experience" className="py-8 sm:py-10 relative z-10">
       <Container>
         <SectionHeader
           tag="Rekam Jejak"
@@ -18,7 +18,7 @@ export const Experience: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
           {/* Kolom Kiri: Pengalaman Kerja */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
+            <div className="flex items-center gap-2 mb-3.5">
               <div className="w-7 h-7 rounded-lg bg-blue-600/20 text-accent-cyan flex items-center justify-center border border-accent-cyan/30">
                 <Briefcase size={15} />
               </div>
@@ -54,7 +54,7 @@ export const Experience: React.FC = () => {
 
           {/* Kolom Kanan: Sertifikasi */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
+            <div className="flex items-center gap-2 mb-3.5">
               <div className="w-7 h-7 rounded-lg bg-cyan-500/20 text-accent-cyan flex items-center justify-center border border-cyan-500/30">
                 <Award size={15} />
               </div>

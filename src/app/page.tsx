@@ -9,19 +9,17 @@ import { Footer } from "@/components/layout/Footer";
 
 export default function Home() {
   return (
-    <main className="min-h-screen relative flex flex-col justify-between selection:bg-accent-cyan/30">
+    <main className="min-h-screen relative selection:bg-accent-cyan/30">
       {/* Floating Header Navbar */}
       <Navbar />
 
       {/* Main Content Sections */}
-      <div className="flex-grow flex flex-col">
-        <Hero />
-        <About />
-        <Skills />
-        <Projects />
-        <Experience />
-        <Contact />
-      </div>
+      <Hero />
+      <About />
+      <Skills />
+      <Projects />
+      <Experience />
+      <Contact />
 
       {/* Site Footer */}
       <Footer />

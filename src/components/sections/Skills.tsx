@@ -38,7 +38,7 @@ export const Skills: React.FC = () => {
   };
 
   return (
-    <section id="skills" className="py-10 sm:py-14 relative z-10">
+    <section id="skills" className="py-8 sm:py-10 relative z-10">
       <Container>
         <SectionHeader
           tag="Kompetensi"

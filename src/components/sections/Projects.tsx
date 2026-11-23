@@ -9,7 +9,7 @@ import { ExternalLink, Github } from "lucide-react";
 
 export const Projects: React.FC = () => {
   return (
-    <section id="projects" className="py-10 sm:py-14 relative z-10">
+    <section id="projects" className="py-8 sm:py-10 relative z-10">
       <Container>
         <SectionHeader
           tag="Portofolio Karya"
@@ -23,13 +23,13 @@ export const Projects: React.FC = () => {
               key={project.id}
               className="overflow-hidden flex flex-col group p-0 border border-white/[0.08] hover:border-accent-cyan/40 transition-all duration-300"
             >
-              {/* Image Preview Box - Responsive Aspect Ratio */}
+              {/* Image Preview Box - Aspect Ratio 16/10 */}
               <div className="relative w-full aspect-[16/10] bg-[#0b1329] overflow-hidden border-b border-white/[0.08] flex items-center justify-center">
                 <Image
                   src={project.image}
                   alt={project.imageAlt}
                   fill
-                  sizes="(min-width: 1024px) 550px, 100vw"
+                  sizes="(min-width: 1024px) 600px, 100vw"
                   className="object-cover transition-transform duration-500 group-hover:scale-103"
                 />
                 <span className="absolute top-3 right-3 bg-slate-950/90 backdrop-blur-md text-accent-cyan text-[11px] font-bold px-2.5 py-1 rounded-full border border-accent-cyan/40 shadow-md">

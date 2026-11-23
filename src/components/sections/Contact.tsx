@@ -42,7 +42,7 @@ export const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-10 sm:py-14 relative z-10">
+    <section id="contact" className="pt-8 pb-8 sm:pt-10 sm:pb-10 relative z-10">
       <Container>
         <SectionHeader
           tag="Kontak"

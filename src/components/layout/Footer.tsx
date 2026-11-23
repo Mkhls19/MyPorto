@@ -7,9 +7,9 @@ export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-slate-950/90 border-t border-white/[0.08] text-slate-400 py-8 sm:py-10 relative z-10">
+    <footer className="bg-slate-950/90 border-t border-white/[0.08] text-slate-400 py-6 sm:py-7 relative z-10">
       <Container>
-        <div className="flex flex-col md:flex-row justify-between items-center gap-5 pb-6 border-b border-white/[0.06]">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4 pb-5 border-b border-white/[0.06]">
           {/* Brand & Tagline */}
           <div className="text-center md:text-left">
             <span className="text-lg sm:text-xl font-extrabold text-white tracking-tight">
@@ -34,7 +34,7 @@ export const Footer: React.FC = () => {
           </nav>
 
           {/* Social Icons */}
-          <div className="flex items-center gap-2.5">
+          <div className="flex items-center gap-2">
             <a
               href="https://github.com/Mkhls19"
               target="_blank"
@@ -64,7 +64,7 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Copyright */}
-        <div className="pt-5 text-center text-xs text-slate-500">
+        <div className="pt-4 text-center text-[11px] text-slate-500">
           <p>&copy; {currentYear} Muhlisin. All rights reserved.</p>
         </div>
       </Container>
