@@ -9,7 +9,7 @@ import { ExternalLink, Github } from "lucide-react";
 
 export const Projects: React.FC = () => {
   return (
-    <section id="projects" className="py-16 sm:py-20 relative z-10">
+    <section id="projects" className="py-10 sm:py-14 relative z-10">
       <Container>
         <SectionHeader
           tag="Portofolio Karya"
@@ -17,44 +17,44 @@ export const Projects: React.FC = () => {
           subtitle="Studi kasus nyata implementasi web dan sistem tertanam untuk mengatasi masalah riil."
         />
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-7">
           {projectsData.map((project) => (
             <Card
               key={project.id}
-              className="overflow-hidden flex flex-col group p-0"
+              className="overflow-hidden flex flex-col group p-0 border border-white/[0.08] hover:border-accent-cyan/40 transition-all duration-300"
             >
-              {/* Image Preview Box */}
-              <div className="relative w-full h-56 sm:h-64 bg-slate-950 overflow-hidden border-b border-white/[0.08]">
+              {/* Image Preview Box - Responsive Aspect Ratio */}
+              <div className="relative w-full aspect-[16/10] bg-[#0b1329] overflow-hidden border-b border-white/[0.08] flex items-center justify-center">
                 <Image
                   src={project.image}
                   alt={project.imageAlt}
                   fill
                   sizes="(min-width: 1024px) 550px, 100vw"
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="object-cover transition-transform duration-500 group-hover:scale-103"
                 />
-                <span className="absolute top-4 right-4 bg-slate-950/85 backdrop-blur-md text-accent-cyan text-xs font-bold px-3 py-1 rounded-full border border-accent-cyan/40 shadow-md">
+                <span className="absolute top-3 right-3 bg-slate-950/90 backdrop-blur-md text-accent-cyan text-[11px] font-bold px-2.5 py-1 rounded-full border border-accent-cyan/40 shadow-md">
                   {project.category}
                 </span>
               </div>
 
               {/* Project Info */}
-              <div className="p-6 sm:p-8 flex flex-col flex-grow justify-between">
+              <div className="p-5 sm:p-6 flex flex-col flex-grow justify-between">
                 <div>
-                  <h3 className="text-lg sm:text-xl font-bold text-white mb-3 group-hover:text-accent-cyan transition-colors">
+                  <h3 className="text-base sm:text-lg font-bold text-white mb-2 group-hover:text-accent-cyan transition-colors line-clamp-2">
                     {project.title}
                   </h3>
-                  <p className="text-slate-300 text-sm leading-relaxed mb-6">
+                  <p className="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
                     {project.description}
                   </p>
                 </div>
 
-                <div>
+                <div className="mt-auto">
                   {/* Tech Stack Tags */}
-                  <div className="flex flex-wrap gap-2 mb-6">
+                  <div className="flex flex-wrap gap-1.5 mb-4">
                     {project.technologies.map((tech, idx) => (
                       <span
                         key={idx}
-                        className="text-xs font-semibold px-2.5 py-1 rounded-md bg-blue-600/15 text-blue-300 border border-accent-cyan/20"
+                        className="text-[11px] font-semibold px-2 py-0.5 rounded-md bg-blue-600/15 text-blue-300 border border-blue-400/20"
                       >
                         {tech}
                       </span>
@@ -62,16 +62,16 @@ export const Projects: React.FC = () => {
                   </div>
 
                   {/* Action Buttons */}
-                  <div className="flex items-center gap-3 pt-4 border-t border-white/[0.08]">
+                  <div className="flex items-center gap-2.5 pt-3.5 border-t border-white/[0.08]">
                     {project.demoUrl && (
                       <Button
                         href={project.demoUrl}
                         variant="outline"
                         size="sm"
-                        className="text-xs"
+                        className="text-xs py-1.5 px-3"
                       >
                         <span>Live Demo</span>
-                        <ExternalLink size={13} />
+                        <ExternalLink size={12} />
                       </Button>
                     )}
                     {project.repoUrl && (
@@ -79,9 +79,9 @@ export const Projects: React.FC = () => {
                         href={project.repoUrl}
                         variant="muted"
                         size="sm"
-                        className="text-xs"
+                        className="text-xs py-1.5 px-3"
                       >
-                        <Github size={13} />
+                        <Github size={12} />
                         <span>GitHub Repo</span>
                       </Button>
                     )}

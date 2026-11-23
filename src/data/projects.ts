@@ -15,7 +15,7 @@ export const projectsData: Project[] = [
   },
   {
     id: "simakos",
-    title: "SIMAKOS (Sistem Informasi Manajemen Kost)",
+    title: "SIMKOS (Sistem Informasi Manajemen Kost)",
     category: "Management System",
     description:
       "Aplikasi manajemen kos komprehensif untuk pemilik dan penghuni kos. Menyelesaikan masalah kurangnya manajemen operasional dengan fitur pengelolaan kamar, pendataan penghuni, dan pencatatan status pembayaran secara terpusat.",
